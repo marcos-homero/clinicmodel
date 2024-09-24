@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Sora } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} flex flex-col items-center bg-background`}
       >
-        {children}
+        <Header />
+        <main className="flex flex-col items-center justify-center w-full max-lg:px-8 lg:w-[1024px]">
+          {children}
+        </main>
       </body>
     </html>
   );
