@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Sora({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <main className="flex flex-col items-center justify-center w-full px-6 max-w-[1300px]">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
