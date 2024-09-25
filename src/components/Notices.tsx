@@ -51,7 +51,7 @@ const Notices = () => {
                   <div className="w-24 h-24">
                     <Image src={appointment} alt="oi" />
                   </div>
-                  <div className="flex flex-col w-[60%] gap-4">
+                  <div className="flex flex-col w-full min-[940px]:w-[60%] gap-4">
                     <h1 className="text-white text-center  text-2xl font-semibold">
                       Consulta de qualidade e humanizada é na Intelimed
                     </h1>
