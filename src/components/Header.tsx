@@ -69,9 +69,9 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex">
+            <div className="flex gap-8">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex border-none items-center gap-4 text-primary text-sm font-semibold outline-0">
+                <DropdownMenuTrigger className="flex border-none items-center gap-2 text-primary text-sm font-semibold outline-0">
                   <FaCalendar size={16} />
                   <p className="w-full">Meus Agendamento</p>
                   <FaArrowDown size={16} />
@@ -83,7 +83,7 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               <Select>
-                <SelectTrigger className="flex items-center border-none w-fit gap-4 bg-white text-sm font-semibold  ">
+                <SelectTrigger className="flex items-center border-none w-fit gap-2 bg-white text-sm font-semibold  ">
                   <FaMapMarked size={16} />
                   <SelectValue placeholder={city} />
                   <FaArrowDown size={16} />
