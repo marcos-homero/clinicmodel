@@ -4,6 +4,7 @@ import {
   FaArrowDown,
   FaCalendar,
   FaMapMarked,
+  FaPhoneSquare,
   FaWhatsapp,
 } from "react-icons/fa";
 import Logo from "./Logo";
@@ -36,22 +37,22 @@ const Header = () => {
   const [city, setCity] = useState("Itapetininga");
 
   return (
-    <header className="text-secondary pt-4 pb-2 bg-white flex flex-col shadow-sm items-center justify-center w-full">
+    <header className="text-secondary h-[137px] pt-4 pb-2 bg-white flex flex-col shadow items-center justify-center w-full">
       <section className="flex px-6 max-w-[1300px] gap-8 w-full max-[940px]:justify-between max-[940px]:items-center ">
         <Logo />
         <div className="max-[940px]:hidden flex flex-col gap-2 w-full justify-between">
           <div className="flex gap-4 justify-between">
             <div className="flex gap-4">
-              <Button className=" bg-sky-50 h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
+              <Button className=" bg-sky-50 hover:bg-sky-200 h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
                 <FaWhatsapp size={24} className="text-primary" />
                 Agende pelo Whatsapp
               </Button>
-              <Button className=" bg-green-50 h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
-                <FaWhatsapp size={24} className="text-primary" />
+              <Button className=" bg-green-50 hover:bg-green-200  h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
+                <FaPhoneSquare size={24} className="text-primary" />
                 Agende pelo Telefone (15) 3537-0431
               </Button>
             </div>
-            <Button className=" bg-white border-[1px] h-10 border-primary gap-2 shadow-sm text-primary font-bold">
+            <Button className=" bg-white hover:bg-primary hover:text-white border-[1px] h-10 border-primary gap-2 shadow-sm text-primary font-bold">
               Resultado de exames <FaArrowDown />
             </Button>
           </div>
@@ -68,9 +69,9 @@ const Header = () => {
                 </Link>
               ))}
             </div>
-            <div className="flex gap-4">
+            <div className="flex">
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex border-none items-center gap-4 text-primary text-sm font-semibold">
+                <DropdownMenuTrigger className="flex border-none items-center gap-4 text-primary text-sm font-semibold outline-0">
                   <FaCalendar size={16} />
                   <p className="w-full">Meus Agendamento</p>
                   <FaArrowDown size={16} />
@@ -81,11 +82,10 @@ const Header = () => {
                   <DropdownMenuItem>Cancelar agendamento</DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <Separator orientation="vertical" />
               <Select>
                 <SelectTrigger className="flex items-center border-none w-fit gap-4 bg-white text-sm font-semibold  ">
                   <FaMapMarked size={16} />
-                  <SelectValue placeholder="Selecionar Cidade" />
+                  <SelectValue placeholder={city} />
                   <FaArrowDown size={16} />
                 </SelectTrigger>
                 <SelectContent className="text-slate-500">

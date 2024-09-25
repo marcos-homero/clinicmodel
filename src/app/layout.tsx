@@ -21,7 +21,7 @@ export default function RootLayout({
         className={`${inter.className} flex flex-col items-center bg-background`}
       >
         <Header />
-        <main className="flex flex-col items-center justify-center w-full max-lg:px-8 lg:w-[1024px]">
+        <main className="flex flex-col items-center justify-center w-full px-6 max-w-[1300px]">
           {children}
         </main>
       </body>
