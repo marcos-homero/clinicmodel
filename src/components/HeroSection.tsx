@@ -19,7 +19,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { FaMapLocation, FaUserDoctor } from "react-icons/fa6";
+import { FaUserDoctor } from "react-icons/fa6";
 
 const HeroSection = () => {
   const caroselOptions = [
