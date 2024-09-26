@@ -152,6 +152,7 @@ const Appointments = () => {
           </Breadcrumb>
         </div>
       </div>
+      <p>{input}</p>
       <CardsView filteredData={currentItems} />
       <Pagination
         qttPerPage={qttPerPage}
