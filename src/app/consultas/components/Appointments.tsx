@@ -21,11 +21,6 @@ const Appointments = () => {
   const { input } = useContext(SearchContext);
   const [currentPage, setCurrentPage] = useState(1);
   const qttPerPage = 10;
-  const indexOfLast = 10;
-  const indexOfFirst = 1;
-  const paginate = (page: number) => setCurrentPage(page);
-
-  console.log(currentPage);
 
   const consultas = [
     {
@@ -110,7 +105,11 @@ const Appointments = () => {
     },
   ];
 
+  const indexOfLast = currentPage * qttPerPage;
+  const indexOfFirst = indexOfLast - qttPerPage;
   const currentItems = consultas.slice(indexOfFirst, indexOfLast);
+  indexOfLast;
+  const paginate = (page: number) => setCurrentPage(page);
 
   return (
     <section className="w-full gap-4">
@@ -155,8 +154,8 @@ const Appointments = () => {
       </div>
       <CardsView filteredData={currentItems} />
       <Pagination
-        examesPerPage={qttPerPage}
-        totalExames={currentItems.length}
+        qttPerPage={qttPerPage}
+        totalItems={consultas.length}
         paginate={paginate}
       />
     </section>

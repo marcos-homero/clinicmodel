@@ -1,20 +1,21 @@
 import React, { useState } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { ImArrowLeft2, ImArrowRight2 } from "react-icons/im";
 
 interface PaginationProps {
-  examesPerPage: number;
-  totalExames: number;
+  qttPerPage: number;
+  totalItems: number;
   paginate: (page: number) => void;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
-  examesPerPage,
-  totalExames,
+  qttPerPage,
+  totalItems,
   paginate,
 }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalExames / examesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalItems / qttPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -41,21 +42,25 @@ const Pagination: React.FC<PaginationProps> = ({
 
   return (
     <nav className="mx-4 mb-8 flex items-center justify-center gap-4 text-base font-semibold text-slate-700">
-      <button
-        className="rounded-md bg-blue-800 p-2 hover:bg-blue-600"
-        onClick={() => handlePage("<<")}
-      >
-        <ImArrowLeft2 className="text-white" size={25} />
+      <button onClick={() => handlePage("<<")}>
+        <FaAngleLeft
+          className={`text-slate-400 ${
+            currentPage === 1 ? "" : "hover:text-primary"
+          } `}
+          size={25}
+        />
       </button>
       <p>{currentPage}</p>
-      <p>-</p>
+      <p>de</p>
       <p>{pageNumbers.length}</p>
-      <button
-        className="rounded-md bg-blue-800 p-2 hover:bg-blue-600"
-        onClick={() => handlePage(">>")}
-        value=">>"
-      >
-        <ImArrowRight2 className="text-white" size={25} />
+      <p>páginas</p>
+      <button onClick={() => handlePage(">>")} value=">>">
+        <FaAngleRight
+          className={`text-slate-400 ${
+            currentPage === pageNumbers.length ? "" : "hover:text-primary"
+          } `}
+          size={25}
+        />
       </button>
     </nav>
   );
