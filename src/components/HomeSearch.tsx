@@ -2,10 +2,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Search from "./ui/search";
 import HomeAppointment from "./HomeAppointment";
 import HomeTest from "./HomeTest";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 const HomeSearch = () => {
   return (
-    <section className="w-full flex flex-col gap-8">
+    <section className="w-full flex flex-col gap-4">
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-bold">O que você precisa ?</h1>
         <p className="text-slate-600">Agende online suas consultas e exames.</p>
@@ -25,13 +27,35 @@ const HomeSearch = () => {
             Exames
           </TabsTrigger>
         </TabsList>
-        <TabsContent className="py-4" value="consultas">
-          <Search />
+        <TabsContent className="pt-4" value="consultas">
+          <Search type="consultas" />
           <HomeAppointment />
+          <div className="flex max-[940px]:flex-col gap-4 pt-2 items-center">
+            <p className="text-slate-600">
+              Não encontrou o que você precisava?
+            </p>
+            <Link
+              href="/exames"
+              className="flex gap-2 text-primary hover:underline items-center font-medium"
+            >
+              Acesse todos as nossas consultas <FaArrowRight />
+            </Link>
+          </div>
         </TabsContent>
-        <TabsContent className="py-4" value="exames">
-          <Search />
+        <TabsContent className="pt-4" value="exames">
+          <Search type="exames" />
           <HomeTest />
+          <div className="flex max-[940px]:flex-col gap-4 pt-2 items-center">
+            <p className="text-slate-600">
+              Não encontrou o que você precisava?
+            </p>
+            <Link
+              href="/exames"
+              className="flex gap-2 text-primary hover:underline items-center font-medium"
+            >
+              Acesse todos os nossos exames <FaArrowRight />
+            </Link>
+          </div>
         </TabsContent>
       </Tabs>
     </section>

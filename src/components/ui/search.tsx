@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import { SearchContext } from "@/contexts/SearchContext";
+import { useRouter } from "next/navigation";
+import { useContext } from "react";
 import { FaSearch } from "react-icons/fa";
 
-const Search = () => {
-  const [input, setInput] = useState("");
-  console.log(input);
+const Search = ({ type }: { type: string }) => {
+  const { setInput } = useContext(SearchContext);
+  const router = useRouter();
 
   return (
     <div
@@ -22,6 +24,11 @@ const Search = () => {
         className={`flex h-11 w-full bg-background py-3 pl-4 text-base text-slate-600 bg-slate-100 outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 dark:bg-tertiary dark:text-white`}
         placeholder="Buscar consulta ou exame"
         onChange={(e) => setInput(e.target.value)}
+        onKeyUp={(e) => {
+          if (e.key === "Enter") {
+            router.push(`/${type}`);
+          }
+        }}
       />
     </div>
   );

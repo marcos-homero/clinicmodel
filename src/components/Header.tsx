@@ -29,6 +29,7 @@ import { useState } from "react";
 
 const Header = () => {
   const navOptions = [
+    { path: "/consultas", name: "Consultas" },
     { path: "/exames", name: "Exames" },
     { path: "/convenios", name: "Convênios" },
     { path: "/blog", name: "Blog" },

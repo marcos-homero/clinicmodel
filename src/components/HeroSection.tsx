@@ -38,7 +38,7 @@ const HeroSection = () => {
 
   return (
     <section className="flex">
-      <div className="flex min-[940px]:absolute min-[940px]:z-50 flex-col w-full gap-4 min-[940px]:w-[940px] min-[940px]:mt-16">
+      <div className="flex min-[940px]:absolute min-[940px]:z-50 flex-col w-full gap-4 min-[940px]:w-[840px] min-[940px]:mt-16">
         <h1 className="text-4xl font-extrabold w-fit text-wrap">
           A melhor escolha para <br /> a sua saúde!
         </h1>

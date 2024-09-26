@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SearchContextProvider } from "@/contexts/SearchContext";
 
 const inter = Sora({ subsets: ["latin"] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex flex-col items-center bg-background`}
       >
-        <Header />
-        <main className="flex flex-col items-center justify-center w-full px-6 max-w-[1300px]">
-          {children}
-        </main>
-        <Footer />
+        <SearchContextProvider>
+          <Header />
+          <main className="flex flex-col items-center justify-center w-full">
+            {children}
+          </main>
+          <Footer />
+        </SearchContextProvider>
       </body>
     </html>
   );
