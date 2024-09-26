@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { ImArrowLeft2, ImArrowRight2 } from "react-icons/im";
 
 interface PaginationProps {
   qttPerPage: number;
