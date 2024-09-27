@@ -1,4 +1,3 @@
-import React from "react";
 import MedicalTests from "./components/MedicalTests";
 
 interface CardProps {
