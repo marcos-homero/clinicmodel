@@ -8,7 +8,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import appointment from "@/public/femaleappointment.svg";
+import appointment from "@/../public/femaleappointment.svg";
 import { Button } from "./ui/button";
 import { FaArrowRight, FaCircle } from "react-icons/fa";
 import Autoplay from "embla-carousel-autoplay";

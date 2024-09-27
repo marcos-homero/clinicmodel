@@ -15,8 +15,12 @@ import Pagination from "@/components/ui/pagination";
 import CardsView from "@/components/ui/cardsview";
 
 interface CardProps {
+  id: string;
   tipo: string;
   valor: string;
+  descricao: string;
+  medico?: string;
+  preparo?: string;
 }
 
 interface MedicalServicesProps {

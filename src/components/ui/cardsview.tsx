@@ -3,8 +3,12 @@ import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 
 interface CardProps {
+  id: string;
   tipo: string;
   valor: string;
+  descricao: string;
+  medico?: string;
+  preparo?: string;
 }
 
 interface FilteredData {
@@ -16,8 +20,8 @@ const CardsView = ({ filteredData, type }: FilteredData) => {
   return (
     <div className="flex w-full items-center justify-center pb-8 ">
       <div className="grid grid-cols-5 grid-rows-2 gap-4 px-6 max-w-[1300px]">
-        {filteredData.map((item, index) => (
-          <Link key={index} href={`/${type}/${index}`}>
+        {filteredData.map((item) => (
+          <Link key={item.id} href={`/${type}/${item.id}`}>
             <Card className="max-[940px]:w-[200px] max-[940px]:h-fit">
               <CardHeader className="text-slate-700 max-[940px]:w-[200px] h-fit flex flex-col gap-4 justify-between">
                 <CardTitle className="text-base h-[48px]">

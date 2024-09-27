@@ -7,7 +7,7 @@ import {
   FaMapMarked,
 } from "react-icons/fa";
 import Image from "next/image";
-import family from "@/public/family.jpg";
+import family from "@/../public/family.jpg";
 import {
   Card,
   CardDescription,

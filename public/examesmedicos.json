@@ -1,0 +1,212 @@
+[
+  {
+    "id": "a1d2f34b-47f6-4e1d-bc7a-631b4dfb1b15",
+    "tipo": "Hemograma",
+    "valor": "70,00",
+    "descricao": "O hemograma é um exame de sangue que avalia as células sanguíneas.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "b3c5e612-2b4f-4e9d-9b9e-51976f6c9f68",
+    "tipo": "Ressonância Magnética",
+    "valor": "250,00",
+    "descricao": "A ressonância magnética usa campos magnéticos para gerar imagens detalhadas de órgãos e tecidos.",
+    "preparo": "Pode ser necessário jejum de 4 a 6 horas e evitar objetos metálicos."
+  },
+  {
+    "id": "d6b7f2ae-e9c2-4d84-9db9-27667c73d9a1",
+    "tipo": "Ultrassonografia",
+    "valor": "120,00",
+    "descricao": "A ultrassonografia usa ondas sonoras para capturar imagens de estruturas internas do corpo.",
+    "preparo": "Dependendo da área a ser examinada, pode ser necessário beber água antes do exame."
+  },
+  {
+    "id": "e8d3f5c1-b1f6-4184-8f9f-a6d5674b8a5e",
+    "tipo": "Tomografia Computadorizada",
+    "valor": "280,00",
+    "descricao": "A tomografia computadorizada usa raios-X para criar imagens detalhadas de áreas internas do corpo.",
+    "preparo": "Pode ser necessário jejum de 4 horas e a ingestão de contraste."
+  },
+  {
+    "id": "c7f8e9d1-45b7-4216-8593-68f45f5c34a4",
+    "tipo": "Eletrocardiograma",
+    "valor": "80,00",
+    "descricao": "O eletrocardiograma registra a atividade elétrica do coração.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "f7b2e8f9-1d6c-4b67-b8c4-83a5c4f2b3b8",
+    "tipo": "Endoscopia",
+    "valor": "200,00",
+    "descricao": "A endoscopia examina o interior do trato digestivo usando uma câmera acoplada a um tubo flexível.",
+    "preparo": "Jejum de 8 horas é necessário."
+  },
+  {
+    "id": "f6c5a9b2-61d9-462e-8f3d-51c76b7f3f8e",
+    "tipo": "Exame de Urina",
+    "valor": "60,00",
+    "descricao": "O exame de urina avalia a composição da urina para detectar anormalidades.",
+    "preparo": "Não é necessário jejum, mas coleta deve ser feita pela manhã."
+  },
+  {
+    "id": "a8b3d7f5-4f9b-4b65-96f1-9b7f4e7c6d85",
+    "tipo": "Raio-X",
+    "valor": "90,00",
+    "descricao": "O Raio-X usa radiação para capturar imagens dos ossos e órgãos internos.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "e5d3f1a2-c7b6-4891-9f93-28f5c6d4a7a8",
+    "tipo": "Mamografia",
+    "valor": "150,00",
+    "descricao": "A mamografia é um exame de imagem das mamas para detectar alterações ou anormalidades.",
+    "preparo": "Não utilizar desodorante ou cremes na região das axilas e seios."
+  },
+  {
+    "id": "f9a7d3b1-1f6b-4e93-8f7a-94e7b3f2b5d6",
+    "tipo": "Ecocardiograma",
+    "valor": "180,00",
+    "descricao": "O ecocardiograma usa ultrassom para examinar o coração e seu funcionamento.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "d4f5c8a9-6f7b-4d84-9e9f-a3c5d7b2f5b6",
+    "tipo": "Colonoscopia",
+    "valor": "230,00",
+    "descricao": "A colonoscopia examina o intestino grosso com uma câmera em um tubo flexível.",
+    "preparo": "Jejum de 8 horas e preparação com laxantes no dia anterior."
+  },
+  {
+    "id": "b9a5e7c4-3b7e-4561-9e6f-a2f8b6c9d3e4",
+    "tipo": "Densitometria Óssea",
+    "valor": "170,00",
+    "descricao": "A densitometria óssea avalia a densidade mineral dos ossos para detectar osteoporose.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "f8d7b4a5-8f6c-4f7b-9d8f-b6e7f5c8b4a3",
+    "tipo": "Teste de Esforço",
+    "valor": "190,00",
+    "descricao": "O teste de esforço avalia o funcionamento do coração durante a atividade física.",
+    "preparo": "Evitar refeições pesadas e cafeína nas 3 horas anteriores ao exame."
+  },
+  {
+    "id": "a2c5f7d4-1f6b-4e97-8e8d-9f7b2f3a4d5e",
+    "tipo": "Holter 24 Horas",
+    "valor": "210,00",
+    "descricao": "O Holter 24 horas monitora a atividade elétrica do coração por um período de 24 horas.",
+    "preparo": "Não é necessário jejum, mas evitar atividades físicas intensas durante o monitoramento."
+  },
+  {
+    "id": "c8f9a3e7-9f6c-4b5d-8f4b-b7a6d3e9f5b6",
+    "tipo": "Exame de Glicemia",
+    "valor": "70,00",
+    "descricao": "O exame de glicemia mede o nível de açúcar no sangue.",
+    "preparo": "Jejum de 8 horas é recomendado."
+  },
+  {
+    "id": "f1c7b4d8-2f9e-4b7f-9d8f-a6b7e5f3c4b9",
+    "tipo": "Exame de Colesterol",
+    "valor": "80,00",
+    "descricao": "O exame de colesterol mede os níveis de colesterol no sangue.",
+    "preparo": "Jejum de 8 a 12 horas é recomendado."
+  },
+  {
+    "id": "b7f5d4a6-1e6c-4f7a-8d7b-a6f9c4b2e9a8",
+    "tipo": "Audiometria",
+    "valor": "100,00",
+    "descricao": "A audiometria avalia a capacidade auditiva do paciente.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "a4c7f8d3-6f9b-4d7f-9f7b-e7c5f2b3a6d5",
+    "tipo": "Exame de TSH",
+    "valor": "75,00",
+    "descricao": "O exame de TSH avalia a função da tireoide medindo os níveis do hormônio estimulador da tireoide.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "f9a7d3b2-4f8b-4d7f-9b6d-a6f5c2b3d8f5",
+    "tipo": "Exame de Fezes",
+    "valor": "65,00",
+    "descricao": "O exame de fezes analisa a presença de parasitas, bactérias ou sangue nas fezes.",
+    "preparo": "Coleta feita preferencialmente pela manhã; seguir orientações do laboratório."
+  },
+  {
+    "id": "e5f9d7b6-1c7e-4f6b-8f7b-b6f3d2a9c8d7",
+    "tipo": "Broncoscopia",
+    "valor": "220,00",
+    "descricao": "A broncoscopia examina as vias aéreas e os pulmões com uma câmera.",
+    "preparo": "Jejum de 8 horas é necessário."
+  },
+  {
+    "id": "b8f7d4a6-2e9b-4d7f-8f6b-b7e9c3d5a6f4",
+    "tipo": "Polissonografia",
+    "valor": "300,00",
+    "descricao": "A polissonografia avalia distúrbios do sono, como apneia.",
+    "preparo": "Evitar cafeína e álcool no dia do exame."
+  },
+  {
+    "id": "f6a3d7b9-1f7c-4e6d-8f5a-b4e9f5d3b7c8",
+    "tipo": "Eletroneuromiografia",
+    "valor": "250,00",
+    "descricao": "A eletroneuromiografia avalia o funcionamento dos nervos e músculos.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "c9b7f4e1-3f6b-4d5a-8f7b-b6a5d7e9f4d3",
+    "tipo": "Cintilografia",
+    "valor": "270,00",
+    "descricao": "A cintilografia utiliza substâncias radioativas para analisar o funcionamento de órgãos.",
+    "preparo": "Pode ser necessário jejum e a suspensão de medicamentos; seguir orientação médica."
+  },
+  {
+    "id": "a7f9d4b3-5e6f-4c8b-9f6d-b8f3a7d5e4a9",
+    "tipo": "Testes Alérgicos",
+    "valor": "140,00",
+    "descricao": "Os testes alérgicos avaliam a sensibilidade a diferentes substâncias.",
+    "preparo": "Suspender o uso de antialérgicos 7 dias antes do exame."
+  },
+  {
+    "id": "f8c5d9a7-6f7e-4f8b-9d7b-a9b6e5f2c4b8",
+    "tipo": "Ecodoppler",
+    "valor": "160,00",
+    "descricao": "O ecodoppler usa ultrassom para avaliar o fluxo sanguíneo em artérias e veias.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "c9b5f2a6-4f7e-4d9a-9f8d-a7e3b5c6d4b8",
+    "tipo": "Biópsia",
+    "valor": "240,00",
+    "descricao": "A biópsia remove uma amostra de tecido para análise laboratorial.",
+    "preparo": "Pode ser necessário jejum e a suspensão de medicamentos; seguir orientação médica."
+  },
+  {
+    "id": "a5f6d3b8-7f6c-4e7b-9f8d-b7e3f5c2d4a7",
+    "tipo": "Exame de Creatinina",
+    "valor": "60,00",
+    "descricao": "O exame de creatinina avalia a função dos rins medindo os níveis de creatinina no sangue.",
+    "preparo": "Jejum de 4 horas é recomendado."
+  },
+  {
+    "id": "e4f9d7b2-5f6a-4d8b-9f7c-a8e3c5b7d2a9",
+    "tipo": "Exame de PCR",
+    "valor": "95,00",
+    "descricao": "O exame de PCR mede a presença de inflamações ou infecções no corpo.",
+    "preparo": "Não é necessário jejum."
+  },
+  {
+    "id": "f3d7b4a5-1f6e-4d9b-9f5a-a6b8d3c5e4f7",
+    "tipo": "Exame de Vitamina D",
+    "valor": "110,00",
+    "descricao": "O exame de vitamina D mede os níveis dessa vitamina no sangue.",
+    "preparo": "Jejum de 4 horas é recomendado."
+  },
+  {
+    "id": "f7e5d9a3-9b7e-4d8f-9f7c-b7d6c3a5f4b8",
+    "tipo": "PET Scan",
+    "valor": "300,00",
+    "descricao": "O PET Scan usa substâncias radioativas para detectar anormalidades no corpo.",
+    "preparo": "Jejum de 6 horas e evitar atividades físicas intensas no dia anterior."
+  }
+]

@@ -35,7 +35,7 @@ const HomeSearch = () => {
               Não encontrou o que você precisava?
             </p>
             <Link
-              href="/exames"
+              href="/consultas"
               className="flex gap-2 text-primary hover:underline items-center font-medium"
             >
               Acesse todos as nossas consultas <FaArrowRight />

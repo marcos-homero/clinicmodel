@@ -1,0 +1,212 @@
+[
+  {
+    "id": "7632bf74-3c6d-4276-abdd-1fd65eac701a",
+    "tipo": "Clínico Geral",
+    "valor": "59,00",
+    "descricao": "O clínico geral é responsável pelo diagnóstico inicial e tratamento de diversas condições de saúde.",
+    "medico": "Dr. Carlos Silva"
+  },
+  {
+    "id": "802d9030-af64-44c1-9bda-3b09376b191e",
+    "tipo": "Cardiologia",
+    "valor": "150,00",
+    "descricao": "O cardiologista cuida do sistema cardiovascular, incluindo o coração e os vasos sanguíneos.",
+    "medico": "Dr. Fernando Costa"
+  },
+  {
+    "id": "7fa68f69-af42-475e-82b3-5180a81c1e19",
+    "tipo": "Dermatologia",
+    "valor": "120,00",
+    "descricao": "O dermatologista trata doenças e condições relacionadas à pele, cabelo e unhas.",
+    "medico": "Dra. Laura Mendes"
+  },
+  {
+    "id": "43f990cd-aae9-48b2-a5f3-cdbdff643afc",
+    "tipo": "Ginecologia",
+    "valor": "180,00",
+    "descricao": "O ginecologista cuida da saúde do sistema reprodutor feminino.",
+    "medico": "Dra. Ana Paula Souza"
+  },
+  {
+    "id": "cfcc8225-f3eb-4466-8a08-107c3bc84581",
+    "tipo": "Pediatria",
+    "valor": "100,00",
+    "descricao": "O pediatra cuida da saúde de bebês, crianças e adolescentes.",
+    "medico": "Dr. João Oliveira"
+  },
+  {
+    "id": "1c2d84af-d803-4188-9a4a-0ee78ee30ad2",
+    "tipo": "Oftalmologia",
+    "valor": "200,00",
+    "descricao": "O oftalmologista trata doenças e problemas relacionados aos olhos e à visão.",
+    "medico": "Dra. Maria Lima"
+  },
+  {
+    "id": "e8d97f8a-06af-4fa3-90c8-396a9a9fcd08",
+    "tipo": "Ortopedia",
+    "valor": "140,00",
+    "descricao": "O ortopedista cuida de problemas relacionados aos ossos, músculos e articulações.",
+    "medico": "Dr. Pedro Almeida"
+  },
+  {
+    "id": "162aab96-be9e-43ae-bc2d-8f4e32d46197",
+    "tipo": "Endocrinologia",
+    "valor": "160,00",
+    "descricao": "O endocrinologista trata distúrbios hormonais e do metabolismo, como diabetes.",
+    "medico": "Dra. Camila Rodrigues"
+  },
+  {
+    "id": "5c9b9e27-1363-4ef5-8184-5be20980ce84",
+    "tipo": "Neurologia",
+    "valor": "250,00",
+    "descricao": "O neurologista cuida de doenças do sistema nervoso, como epilepsia e AVC.",
+    "medico": "Dr. Ricardo Ferreira"
+  },
+  {
+    "id": "fb35231d-a5d9-4a58-88a3-0e3a57fa6fcf",
+    "tipo": "Psiquiatria",
+    "valor": "220,00",
+    "descricao": "O psiquiatra trata distúrbios mentais e emocionais, como depressão e ansiedade.",
+    "medico": "Dra. Patrícia Azevedo"
+  },
+  {
+    "id": "f6dacc3a-b4a7-482a-81f4-e62cea1fb50b",
+    "tipo": "Gastroenterologia",
+    "valor": "190,00",
+    "descricao": "O gastroenterologista trata doenças do sistema digestivo, como refluxo e gastrite.",
+    "medico": "Dr. Marcos Farias"
+  },
+  {
+    "id": "83ac06f0-fa20-4e0a-8a2a-bdbd13c243c4",
+    "tipo": "Urologia",
+    "valor": "180,00",
+    "descricao": "O urologista cuida do sistema urinário e do sistema reprodutor masculino.",
+    "medico": "Dr. Alexandre Reis"
+  },
+  {
+    "id": "be7a4d70-3e1a-401d-8027-3b80fb4b82ca",
+    "tipo": "Otorrinolaringologia",
+    "valor": "130,00",
+    "descricao": "O otorrinolaringologista trata de doenças do ouvido, nariz e garganta.",
+    "medico": "Dra. Juliana Pereira"
+  },
+  {
+    "id": "4cf44916-b649-4cbc-bc19-64d36d59832d",
+    "tipo": "Hematologia",
+    "valor": "170,00",
+    "descricao": "O hematologista trata doenças do sangue e órgãos hematopoéticos.",
+    "medico": "Dr. Lucas Martins"
+  },
+  {
+    "id": "ec0440c8-1db4-4dce-bb86-b77bb738af7e",
+    "tipo": "Reumatologia",
+    "valor": "210,00",
+    "descricao": "O reumatologista cuida de doenças articulares e autoimunes, como artrite e lúpus.",
+    "medico": "Dra. Renata Dias"
+  },
+  {
+    "id": "e6998eaf-18ca-4c95-977d-1ff65b4991f0",
+    "tipo": "Oncologia",
+    "valor": "300,00",
+    "descricao": "O oncologista trata de câncer e realiza o acompanhamento de tratamentos oncológicos.",
+    "medico": "Dr. Felipe Alves"
+  },
+  {
+    "id": "af14bed0-a3d0-47b7-a1c5-6a3115b6f448",
+    "tipo": "Nefrologia",
+    "valor": "220,00",
+    "descricao": "O nefrologista cuida dos rins e do sistema urinário, tratando doenças como insuficiência renal.",
+    "medico": "Dra. Gabriela Borges"
+  },
+  {
+    "id": "4d29febb-b392-47da-8cc2-ac77d1531705",
+    "tipo": "Infectologia",
+    "valor": "200,00",
+    "descricao": "O infectologista trata doenças infecciosas causadas por vírus, bactérias e outros microorganismos.",
+    "medico": "Dr. Eduardo Lima"
+  },
+  {
+    "id": "4f56beb1-60e3-4a36-9ef8-f9610d1df73e",
+    "tipo": "Alergologia",
+    "valor": "110,00",
+    "descricao": "O alergologista trata de alergias e distúrbios relacionados ao sistema imunológico.",
+    "medico": "Dra. Tatiana Moreira"
+  },
+  {
+    "id": "207362d8-ede3-4c77-bafe-47bcb6061811",
+    "tipo": "Pneumologia",
+    "valor": "150,00",
+    "descricao": "O pneumologista cuida de doenças respiratórias, como asma e bronquite.",
+    "medico": "Dr. Renato Teixeira"
+  },
+  {
+    "id": "85413d2d-dc12-480d-8c04-6688cd30043e",
+    "tipo": "Angiologia",
+    "valor": "240,00",
+    "descricao": "O angiologista trata doenças dos vasos sanguíneos e linfáticos, como varizes.",
+    "medico": "Dra. Isabel Santos"
+  },
+  {
+    "id": "e2ae1660-1f59-403c-8083-f5929b7a7517",
+    "tipo": "Cirurgia Plástica",
+    "valor": "300,00",
+    "descricao": "O cirurgião plástico realiza procedimentos cirúrgicos estéticos e reconstrutivos.",
+    "medico": "Dr. Paulo Castro"
+  },
+  {
+    "id": "397d558b-1ec8-4b71-8ecb-cdd80df46e3b",
+    "tipo": "Radiologia",
+    "valor": "180,00",
+    "descricao": "O radiologista utiliza imagens médicas para diagnosticar doenças e condições.",
+    "medico": "Dr. Guilherme Neves"
+  },
+  {
+    "id": "d067528f-4827-4b54-8b3c-aa21ecd2bcca",
+    "tipo": "Geriatria",
+    "valor": "140,00",
+    "descricao": "O geriatra cuida da saúde de idosos, promovendo bem-estar e prevenção de doenças.",
+    "medico": "Dra. Sandra Barros"
+  },
+  {
+    "id": "10a2fecb-2740-454c-945a-d6e62cf1b8af",
+    "tipo": "Imunologia",
+    "valor": "160,00",
+    "descricao": "O imunologista trata distúrbios do sistema imunológico, como imunodeficiências e autoimunidade.",
+    "medico": "Dr. Leonardo Nunes"
+  },
+  {
+    "id": "7a1200c2-9026-43aa-b3c0-230d715db497",
+    "tipo": "Nutrologia",
+    "valor": "130,00",
+    "descricao": "O nutrólogo cuida da alimentação e nutrição para melhorar a saúde e prevenir doenças.",
+    "medico": "Dra. Fernanda Pires"
+  },
+  {
+    "id": "60a01edc-02d5-4709-83b9-b4ec3efd4c3e",
+    "tipo": "Proctologia",
+    "valor": "170,00",
+    "descricao": "O proctologista trata doenças do intestino grosso, reto e ânus, como hemorroidas.",
+    "medico": "Dr. André Lopes"
+  },
+  {
+    "id": "f910db80-0f4c-45ea-9d3a-8f91bc82817e",
+    "tipo": "Fonoaudiologia",
+    "valor": "90,00",
+    "descricao": "O fonoaudiólogo cuida de distúrbios da fala, audição e linguagem.",
+    "medico": "Dra. Carolina Andrade"
+  },
+  {
+    "id": "6b3f97a3-efeb-4b10-ab48-125c1db0dd59",
+    "tipo": "Acupuntura",
+    "valor": "80,00",
+    "descricao": "O acupunturista utiliza agulhas para tratar condições de saúde e dores.",
+    "medico": "Dr. Gustavo Ramos"
+  },
+  {
+    "id": "2bd34d31-b9aa-42d3-a8a4-379c56750b20",
+    "tipo": "Medicina Esportiva",
+    "valor": "220,00",
+    "descricao": "O médico do esporte trata e previne lesões relacionadas à prática de atividades físicas.",
+    "medico": "Dra. Luísa Carvalho"
+  }
+]
