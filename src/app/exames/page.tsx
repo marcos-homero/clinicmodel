@@ -10,10 +10,15 @@ interface CardProps {
 }
 
 const page = async () => {
-  const data = await fetch("http://localhost:3000/exames.json");
-  const posts = await data.json();
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
 
-  const converted: CardProps[] = Object.values(posts);
+  const data = await fetch(`${origin}/examesmedicos.json`);
+  const newData = await data.json();
+
+  const converted: CardProps[] = Object.values(newData);
 
   return (
     <div className="w-full">

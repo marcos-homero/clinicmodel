@@ -9,9 +9,15 @@ interface CardProps {
 }
 
 const page = async () => {
-  const data = await fetch("http://localhost:3000/consultasmedicas.json");
-  const posts = await data.json();
-  const converted: CardProps[] = Object.values(posts);
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
+
+  const data = await fetch(`${origin}/consultasmedicas.json`);
+  const newData = await data.json();
+
+  const converted: CardProps[] = Object.values(newData);
 
   return (
     <div className="w-full">

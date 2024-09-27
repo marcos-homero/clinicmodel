@@ -7,10 +7,15 @@ interface CardProps {
 }
 
 const page = async ({ params }: { params: { id: string } }) => {
-  const data = await fetch("http://localhost:3000/examesmedicos.json");
-  const posts = await data.json();
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
 
-  const converted: CardProps[] = Object.values(posts);
+  const data = await fetch(`${origin}/examesmedicos.json`);
+  const newData = await data.json();
+
+  const converted: CardProps[] = Object.values(newData);
 
   const oi = converted.find((post) => post.id === params.id);
 
