@@ -108,7 +108,7 @@ const Appointments = () => {
   const indexOfLast = currentPage * qttPerPage;
   const indexOfFirst = indexOfLast - qttPerPage;
   const currentItems = consultas.slice(indexOfFirst, indexOfLast);
-  indexOfLast;
+
   const paginate = (page: number) => setCurrentPage(page);
 
   return (
