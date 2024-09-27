@@ -79,7 +79,7 @@ const MedicalServices = ({
           </Breadcrumb>
         </div>
       </div>
-      <CardsView filteredData={filteredData} />
+      <CardsView filteredData={filteredData} type={pageTitle.toLowerCase()} />
       <Pagination
         qttPerPage={qttPerPage}
         totalItems={dataLength}
