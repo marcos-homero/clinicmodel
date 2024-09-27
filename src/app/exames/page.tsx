@@ -10,12 +10,9 @@ interface CardProps {
 }
 
 const page = async () => {
-  const origin =
-    typeof window !== "undefined" && window.location.origin
-      ? window.location.origin
-      : "";
-
-  const data = await fetch(`${origin}/examesmedicos.json`);
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_LINK}/examesmedicos.json`
+  );
   const newData = await data.json();
 
   const converted: CardProps[] = Object.values(newData);
