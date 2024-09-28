@@ -17,8 +17,9 @@ interface ContentProps {
 const Appointments = () => {
   const { input } = useContext(SearchContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filteredData, setFilteredData] = useState<CardProps[]>([]);
-  const qttPerPage = 10;
+  const [content, setContent] = useState<ContentProps[]>([]);
+  const [filteredData, setFilteredData] = useState<ContentProps[]>([]);
+  const qttPerPage = 12;
 
   const indexOfLast = currentPage * qttPerPage;
   const indexOfFirst = indexOfLast - qttPerPage;
