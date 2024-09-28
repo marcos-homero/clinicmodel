@@ -4,8 +4,9 @@ import MedicalServices from "@/components/MedicalServices";
 import { SearchContext } from "@/contexts/SearchContext";
 import { useContext, useEffect, useState } from "react";
 import test from "@/../public/test.svg";
+import GlobalApi from "@/services/GlobalApi";
 
-interface CardProps {
+interface ContentProps {
   id: string;
   tipo: string;
   valor: string;
@@ -13,11 +14,12 @@ interface CardProps {
   preparo: string;
 }
 
-const MedicalTests = ({ data }: { data: CardProps[] }) => {
+const MedicalTests = () => {
   const { input } = useContext(SearchContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filteredData, setFilteredData] = useState<CardProps[]>([]);
-  const qttPerPage = 10;
+  const [content, setContent] = useState<ContentProps[]>([]);
+  const [filteredData, setFilteredData] = useState<ContentProps[]>([]);
+  const qttPerPage = 12;
 
   const indexOfLast = currentPage * qttPerPage;
   const indexOfFirst = indexOfLast - qttPerPage;
@@ -25,22 +27,15 @@ const MedicalTests = ({ data }: { data: CardProps[] }) => {
   const paginate = (page: number) => setCurrentPage(page);
 
   useEffect(() => {
-    const normalizeText = (text: string) => {
-      return text
-        .normalize("NFD") // Normaliza o texto decompondo caracteres acentuados
-        .replace(/[\u0300-\u036f]/g, ""); // Remove os diacríticos (acentos)
+    const getExamesApi = () => {
+      GlobalApi.GetExames(indexOfFirst, indexOfLast, input).then((resp) => {
+        setContent(resp[1]);
+        setFilteredData(resp[0]);
+      });
     };
 
-    const inputData = data.filter((item) => {
-      const normalizedTipo = normalizeText(item.tipo.toLowerCase());
-      const normalizedInput = normalizeText(input.toLowerCase());
-      return normalizedTipo.includes(normalizedInput);
-    });
-
-    const currentItems = inputData.slice(indexOfFirst, indexOfLast);
-
-    setFilteredData(currentItems);
-  }, [input, indexOfFirst, indexOfLast, data]);
+    getExamesApi();
+  }, [input, indexOfFirst, indexOfLast]);
 
   return (
     <div className="w-full">
@@ -49,7 +44,7 @@ const MedicalTests = ({ data }: { data: CardProps[] }) => {
         pageSubTitle="exame"
         typeSvg={test}
         qttPerPage={qttPerPage}
-        dataLength={data.length}
+        dataLength={content.length}
         paginate={paginate}
         filteredData={filteredData}
       />

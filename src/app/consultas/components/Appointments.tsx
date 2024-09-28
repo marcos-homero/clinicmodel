@@ -4,8 +4,9 @@ import appointment from "@/../public/appointment.svg";
 import { useContext, useEffect, useState } from "react";
 import { SearchContext } from "@/contexts/SearchContext";
 import MedicalServices from "@/components/MedicalServices";
+import GlobalApi from "@/services/GlobalApi";
 
-interface CardProps {
+interface ContentProps {
   id: string;
   tipo: string;
   valor: string;
@@ -13,11 +14,12 @@ interface CardProps {
   medico: string;
 }
 
-const Appointments = ({ data }: { data: CardProps[] }) => {
+const Appointments = () => {
   const { input } = useContext(SearchContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filteredData, setFilteredData] = useState<CardProps[]>([]);
-  const qttPerPage = 10;
+  const [content, setContent] = useState<ContentProps[]>([]);
+  const [filteredData, setFilteredData] = useState<ContentProps[]>([]);
+  const qttPerPage = 12;
 
   const indexOfLast = currentPage * qttPerPage;
   const indexOfFirst = indexOfLast - qttPerPage;
@@ -25,22 +27,15 @@ const Appointments = ({ data }: { data: CardProps[] }) => {
   const paginate = (page: number) => setCurrentPage(page);
 
   useEffect(() => {
-    const normalizeText = (text: string) => {
-      return text
-        .normalize("NFD") // Normaliza o texto decompondo caracteres acentuados
-        .replace(/[\u0300-\u036f]/g, ""); // Remove os diacríticos (acentos)
+    const getConsultasApi = () => {
+      GlobalApi.GetConsultas(indexOfFirst, indexOfLast, input).then((resp) => {
+        setContent(resp[1]);
+        setFilteredData(resp[0]);
+      });
     };
 
-    const inputData = data.filter((item) => {
-      const normalizedTipo = normalizeText(item.tipo.toLowerCase());
-      const normalizedInput = normalizeText(input.toLowerCase());
-      return normalizedTipo.includes(normalizedInput);
-    });
-
-    const currentItems = inputData.slice(indexOfFirst, indexOfLast);
-
-    setFilteredData(currentItems);
-  }, [input, indexOfFirst, indexOfLast, data]);
+    getConsultasApi();
+  }, [input, indexOfFirst, indexOfLast]);
 
   return (
     <div className="w-full">
@@ -49,7 +44,7 @@ const Appointments = ({ data }: { data: CardProps[] }) => {
         pageSubTitle="consulta"
         typeSvg={appointment}
         qttPerPage={qttPerPage}
-        dataLength={data.length}
+        dataLength={content.length}
         paginate={paginate}
         filteredData={filteredData}
       />

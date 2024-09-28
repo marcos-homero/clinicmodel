@@ -19,18 +19,18 @@ interface FilteredData {
 const CardsView = ({ filteredData, type }: FilteredData) => {
   return (
     <div className="flex w-full items-center justify-center pb-8 ">
-      <div className="grid grid-cols-5 grid-rows-2 gap-4 px-6 max-w-[1300px]">
+      <div className="max-[480px]:grid-cols-1 max-[480px]:grid-rows-12 max-sm:grid-cols-2 max-sm:5 max-sm:grid-rows-6 max-[940px]:grid-cols-3 max-[940px]:grid-rows-4 grid grid-cols-4 grid-rows-3 gap-4 w-full px-6 max-w-[1300px]">
         {filteredData.map((item) => (
           <Link key={item.id} href={`/${type}/${item.id}`}>
-            <Card className="max-[940px]:w-[200px] max-[940px]:h-fit">
-              <CardHeader className="text-slate-700 max-[940px]:w-[200px] h-fit flex flex-col gap-4 justify-between">
-                <CardTitle className="text-base h-[48px]">
+            <Card className="max-[940px]:w-fit max-[940px]:h-fit">
+              <CardHeader className="text-slate-700 max-[940px]:w-full h-fit flex flex-col gap-4 justify-between">
+                <CardTitle className="max-[940px]:text-sm text-base h-[48px] truncate text-wrap">
                   {item.tipo}
                 </CardTitle>
                 <span className="h-[1px] bg-slate-200" />
                 <CardContent className="flex p-0 flex-col gap-2">
                   <p className="text-xs text-slate-600">A partir de:</p>
-                  <p className="text-xl font-bold text-black">
+                  <p className="text-xl font-bold max-sm:text-lg text-black">
                     R$ {item.valor}
                   </p>
                   <p className="text-xs text-slate-600 text-wrap">

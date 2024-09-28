@@ -1,25 +1,30 @@
+"use client";
+
+import GlobalApi from "@/services/GlobalApi";
+import { useEffect, useState } from "react";
+
 interface CardProps {
   id: string;
   tipo: string;
   valor: string;
   descricao: string;
-  medico: string;
+  preparo: string;
 }
 
-const page = async ({ params }: { params: { id: string } }) => {
-  const origin =
-    typeof window !== "undefined" && window.location.origin
-      ? window.location.origin
-      : "";
+const Page = ({ params }: { params: { id: string } }) => {
+  const [content, setContent] = useState<CardProps>();
 
-  const data = await fetch(`${origin}/examesmedicos.json`);
-  const newData = await data.json();
+  useEffect(() => {
+    const getConsultasApi = () => {
+      GlobalApi.GetExameId(params.id).then((resp) => {
+        setContent(resp);
+      });
+    };
 
-  const converted: CardProps[] = Object.values(newData);
+    getConsultasApi();
+  }, [params.id]);
 
-  const oi = converted.find((post) => post.id === params.id);
-
-  return <div>{oi?.tipo}</div>;
+  return <div>{content?.tipo}</div>;
 };
 
-export default page;
+export default Page;

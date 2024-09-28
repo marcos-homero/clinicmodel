@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import GlobalApi from "@/services/GlobalApi";
+import React, { useEffect, useState } from "react";
 
 interface CardProps {
   id: string;
@@ -8,20 +11,20 @@ interface CardProps {
   medico: string;
 }
 
-const page = async ({ params }: { params: { id: string } }) => {
-  const origin =
-    typeof window !== "undefined" && window.location.origin
-      ? window.location.origin
-      : "";
+const Page = ({ params }: { params: { id: string } }) => {
+  const [content, setContent] = useState<CardProps>();
 
-  const data = await fetch(`${origin}/consultasmedicas.json`);
-  const newData = await data.json();
+  useEffect(() => {
+    const getConsultasApi = () => {
+      GlobalApi.GetConsultaId(params.id).then((resp) => {
+        setContent(resp);
+      });
+    };
 
-  const converted: CardProps[] = Object.values(newData);
+    getConsultasApi();
+  }, [params.id]);
 
-  const oi = converted.find((post) => post.id === params.id);
-
-  return <div>{oi?.tipo}</div>;
+  return <div>{content?.tipo}</div>;
 };
 
-export default page;
+export default Page;
