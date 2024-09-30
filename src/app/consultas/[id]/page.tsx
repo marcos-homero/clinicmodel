@@ -2,13 +2,16 @@
 
 import GlobalApi from "@/services/GlobalApi";
 import React, { useEffect, useState } from "react";
+import typeSvg from "@/../public/appointment.svg";
+import SubHeader from "@/components/SubHeader";
 
 interface CardProps {
   id: string;
   tipo: string;
   valor: string;
   descricao: string;
-  medico: string;
+  medico?: string;
+  preparo?: string;
 }
 
 const Page = ({ params }: { params: { id: string } }) => {
@@ -24,7 +27,7 @@ const Page = ({ params }: { params: { id: string } }) => {
     getConsultasApi();
   }, [params.id]);
 
-  return <div>{content?.tipo}</div>;
+  return <>{content && <SubHeader content={content} typeSvg={typeSvg} />}</>;
 };
 
 export default Page;

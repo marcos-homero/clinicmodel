@@ -44,10 +44,16 @@ const Header = () => {
         <div className="max-[940px]:hidden flex flex-col gap-2 w-full justify-between">
           <div className="flex gap-4 justify-between">
             <div className="flex gap-4">
-              <Button className=" bg-sky-50 hover:bg-sky-200 h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
+              <Link
+                href={
+                  "https://api.whatsapp.com/send?phone=551535370431&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+                }
+                target="_blank"
+                className="flex items-center rounded-lg px-4 bg-sky-50 hover:bg-sky-200 h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal"
+              >
                 <FaWhatsapp size={24} className="text-primary" />
                 Agende pelo Whatsapp
-              </Button>
+              </Link>
               <Button className=" bg-green-50 hover:bg-green-200  h-9 gap-2 text-xs shadow-sm text-slate-600 font-normal">
                 <FaPhoneSquare size={24} className="text-primary" />
                 Agende pelo Telefone (15) 3537-0431

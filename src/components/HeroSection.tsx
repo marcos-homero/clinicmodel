@@ -15,24 +15,29 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { FaUserDoctor } from "react-icons/fa6";
+import Link from "next/link";
 
 const HeroSection = () => {
   const caroselOptions = [
     {
       icon: <FaUserDoctor size={24} />,
       title: "Verificar Médicos",
+      href: "/consultas",
     },
     {
       icon: <FaFileMedicalAlt size={24} />,
       title: "Verificar Exames",
+      href: "/exames",
     },
     {
       icon: <FaCalendar size={24} />,
       title: "Meus agendamentos",
+      href: "/agendamentos",
     },
     {
       icon: <FaMapMarked size={24} />,
       title: "Unidades",
+      href: "/unidades",
     },
   ];
 
@@ -51,14 +56,16 @@ const HeroSection = () => {
         </Button>
         <div className="grid grid-cols-2 grid-rows-2 min-[940px]:flex gap-4 min-[940px]:flex-wrap w-full my-8">
           {caroselOptions.map((item, index) => (
-            <Card key={index} className="min-[940px]:w-[186px] h-[118px]">
-              <CardHeader className="text-slate-700 flex flex-col h-full justify-between">
-                <CardTitle>{item.icon}</CardTitle>
-                <CardDescription className="flex items-center gap-2 font-semibold">
-                  {item.title} <FaArrowRight />
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link key={index} href={item.href}>
+              <Card className="min-[940px]:w-[186px] h-[118px]">
+                <CardHeader className="text-slate-700 flex flex-col h-full justify-between">
+                  <CardTitle>{item.icon}</CardTitle>
+                  <CardDescription className="flex items-center gap-2 font-semibold">
+                    {item.title} <FaArrowRight />
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
@@ -68,6 +75,7 @@ const HeroSection = () => {
             className="rounded-xl"
             alt="Familia feliz"
             fill
+            sizes="100vw"
             src={family}
             style={{ objectFit: "cover" }}
           />

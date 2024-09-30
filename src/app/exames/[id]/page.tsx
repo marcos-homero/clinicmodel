@@ -2,6 +2,8 @@
 
 import GlobalApi from "@/services/GlobalApi";
 import { useEffect, useState } from "react";
+import medicaltest from "@/../public/test.svg";
+import SubHeader from "@/components/SubHeader";
 
 interface CardProps {
   id: string;
@@ -24,7 +26,9 @@ const Page = ({ params }: { params: { id: string } }) => {
     getConsultasApi();
   }, [params.id]);
 
-  return <div>{content?.tipo}</div>;
+  return (
+    <>{content && <SubHeader content={content} typeSvg={medicaltest} />}</>
+  );
 };
 
 export default Page;
