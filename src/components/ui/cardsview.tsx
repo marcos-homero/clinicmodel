@@ -25,7 +25,10 @@ const CardsView = ({ filteredData, type }: FilteredData) => {
             <Card className="max-[940px]:w-fit max-[940px]:h-fit">
               <CardHeader className="text-slate-700 max-[940px]:w-full h-fit flex flex-col gap-4 justify-between">
                 <CardTitle className="max-[940px]:text-sm text-base h-[48px] truncate text-wrap">
-                  {item.tipo}
+                  <p>{item.tipo}</p>
+                  {item.medico && (
+                    <p className="text-sm text-slate-500">{item.medico}</p>
+                  )}
                 </CardTitle>
                 <span className="h-[1px] bg-slate-200" />
                 <CardContent className="flex p-0 flex-col gap-2">

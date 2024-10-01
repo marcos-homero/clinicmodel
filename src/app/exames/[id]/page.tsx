@@ -2,8 +2,10 @@
 
 import GlobalApi from "@/services/GlobalApi";
 import { useEffect, useState } from "react";
-import medicaltest from "@/../public/test.svg";
+import typeSvg from "@/../public/test.svg";
 import SubHeader from "@/components/SubHeader";
+import Notices from "@/components/Notices";
+import HomeSearch from "@/components/HomeSearch";
 
 interface CardProps {
   id: string;
@@ -27,7 +29,13 @@ const Page = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
 
   return (
-    <>{content && <SubHeader content={content} typeSvg={medicaltest} />}</>
+    <div className="flex flex-col gap-16 w-full items-center pb-16">
+      {content && <SubHeader content={content} typeSvg={typeSvg} />}
+      <div className="flex flex-col justify-between items-center gap-16 max-sm:gap-8 w-full px-6 max-w-[1300px]">
+        <Notices />
+        <HomeSearch />
+      </div>
+    </div>
   );
 };
 
