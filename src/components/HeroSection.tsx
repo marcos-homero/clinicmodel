@@ -51,9 +51,16 @@ const HeroSection = () => {
           Conte com a confiança e segurança dos nossos <br /> laboratórios e
           médicos. Agende já sua consulta
         </p>
-        <Button className="flex mt-4 text-base w-fit px-8 gap-4 py-6">
-          Agende já <FaArrowRight />
-        </Button>
+        <Link
+          href={
+            "https://api.whatsapp.com/send?phone=551535370431&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
+          }
+        >
+          <Button className="flex mt-4 text-base w-fit px-8 gap-4 py-6">
+            Agende já <FaArrowRight />
+          </Button>
+        </Link>
+
         <div className="grid grid-cols-2 grid-rows-2 min-[940px]:flex gap-4 min-[940px]:flex-wrap w-full my-8">
           {caroselOptions.map((item, index) => (
             <Link key={index} href={item.href}>

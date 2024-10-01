@@ -24,7 +24,7 @@ const CardsView = ({ filteredData, type }: FilteredData) => {
           <Link key={item.id} href={`/${type}/${item.id}`}>
             <Card className="max-[940px]:w-fit max-[940px]:h-fit">
               <CardHeader className="text-slate-700 max-[940px]:w-full h-fit flex flex-col gap-4 justify-between">
-                <CardTitle className="max-[940px]:text-sm text-base h-[48px] truncate text-wrap">
+                <CardTitle className="max-[940px]:text-sm text-base h-[64px] text-wrap">
                   <p>{item.tipo}</p>
                   {item.medico && (
                     <p className="text-sm text-slate-500">{item.medico}</p>
