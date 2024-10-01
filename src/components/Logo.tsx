@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex flex-col justify-around items-center w-fit">
+    <Link href="/" className="flex w-fit flex-col items-center justify-around">
       <FaClinicMedical size={64} className="text-primary" />
-      <h1 className="text-primary text-xl font-bold">Intelimed</h1>
+      <h1 className="text-xl font-bold text-primary">Intelimed</h1>
     </Link>
   );
 };

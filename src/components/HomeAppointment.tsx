@@ -39,24 +39,24 @@ const HomeAppointment = () => {
   ];
 
   return (
-    <div className="flex gap-4 justify-between py-8 w-full overflow-x-auto whitespace-nowrap">
+    <div className="flex w-full justify-between gap-4 overflow-x-auto whitespace-nowrap py-8">
       {appointments.map((item) => (
         <Link
           key={item.id}
           href={`/consultas/${item.id}`}
-          className="max-[940px]:w-[200px] max-[940px]:h-fit w-1/4"
+          className="w-1/4 max-[940px]:h-fit max-[940px]:w-[200px]"
         >
           <Card key={item.id}>
-            <CardHeader className="text-slate-700 max-[940px]:w-[200px] h-fit flex flex-col gap-4 justify-between">
-              <CardTitle className=" text-base h-[64px] text-wrap">
+            <CardHeader className="flex h-fit flex-col justify-between gap-4 text-slate-700 max-[940px]:w-[200px]">
+              <CardTitle className="h-[64px] text-wrap text-base">
                 <p>{item.tipo}</p>
                 <p className="text-sm text-slate-500">{item.medico}</p>
               </CardTitle>
               <span className="h-[1px] bg-slate-200" />
-              <CardContent className="flex p-0 flex-col gap-2">
+              <CardContent className="flex flex-col gap-2 p-0">
                 <p className="text-xs text-slate-600">A partir de:</p>
                 <p className="text-xl font-bold text-black">{item.valor}</p>
-                <p className="text-xs text-slate-600 text-wrap">
+                <p className="text-wrap text-xs text-slate-600">
                   O valor da consulta pode variar de acordo com o covênio.
                 </p>
                 <div className="flex justify-end">

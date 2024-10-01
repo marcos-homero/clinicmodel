@@ -4,7 +4,7 @@ import Notices from "@/components/Notices";
 
 export default function Home() {
   return (
-    <div className="flex flex-col py-16 gap-16 w-full px-6 max-w-[1300px] ">
+    <div className="flex w-full max-w-[1300px] flex-col gap-16 px-6 py-16">
       <HeroSection />
       <Notices />
       <HomeSearch />

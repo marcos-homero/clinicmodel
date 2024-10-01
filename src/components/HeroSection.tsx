@@ -43,11 +43,11 @@ const HeroSection = () => {
 
   return (
     <section className="flex">
-      <div className="flex min-[940px]:absolute min-[940px]:z-50 flex-col w-full gap-4 min-[940px]:w-[840px] min-[940px]:mt-16">
-        <h1 className="text-4xl font-extrabold w-fit text-wrap">
+      <div className="flex w-full flex-col gap-4 min-[940px]:absolute min-[940px]:z-50 min-[940px]:mt-16 min-[940px]:w-[840px]">
+        <h1 className="w-fit text-wrap text-4xl font-extrabold">
           A melhor escolha para <br /> a sua saúde!
         </h1>
-        <p className="text-slate-600 text-lg w-fit text-wrap">
+        <p className="w-fit text-wrap text-lg text-slate-600">
           Conte com a confiança e segurança dos nossos <br /> laboratórios e
           médicos. Agende já sua consulta
         </p>
@@ -56,16 +56,16 @@ const HeroSection = () => {
             "https://api.whatsapp.com/send?phone=551535370431&text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es"
           }
         >
-          <Button className="flex mt-4 text-base w-fit px-8 gap-4 py-6">
+          <Button className="mt-4 flex w-fit gap-4 px-8 py-6 text-base">
             Agende já <FaArrowRight />
           </Button>
         </Link>
 
-        <div className="grid grid-cols-2 grid-rows-2 min-[940px]:flex gap-4 min-[940px]:flex-wrap w-full my-8">
+        <div className="my-8 grid w-full grid-cols-2 grid-rows-2 gap-4 min-[940px]:flex min-[940px]:flex-wrap">
           {caroselOptions.map((item, index) => (
             <Link key={index} href={item.href}>
-              <Card className="min-[940px]:w-[186px] h-[118px]">
-                <CardHeader className="text-slate-700 flex flex-col h-full justify-between">
+              <Card className="h-[118px] min-[940px]:w-[186px]">
+                <CardHeader className="flex h-full flex-col justify-between text-slate-700">
                   <CardTitle>{item.icon}</CardTitle>
                   <CardDescription className="flex items-center gap-2 font-semibold">
                     {item.title} <FaArrowRight />
@@ -76,8 +76,8 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
-      <div className="flex max-[940px]:hidden w-full justify-end">
-        <div className="relative  w-[688px] h-[484px]">
+      <div className="flex w-full justify-end max-[940px]:hidden">
+        <div className="relative h-[484px] w-[688px]">
           <Image
             className="rounded-xl"
             alt="Familia feliz"

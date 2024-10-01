@@ -30,9 +30,9 @@ const Page = ({ params }: { params: { id: string } }) => {
   }, [params.id]);
 
   return (
-    <div className="flex flex-col gap-16 w-full items-center pb-16">
+    <div className="flex w-full flex-col items-center gap-16 pb-16">
       {content && <SubHeader content={content} typeSvg={typeSvg} />}
-      <div className="flex flex-col justify-between items-center gap-16 max-sm:gap-8 w-full px-6 max-w-[1300px]">
+      <div className="flex w-full max-w-[1300px] flex-col items-center justify-between gap-16 px-6 max-sm:gap-8">
         <Notices />
         <HomeSearch />
       </div>

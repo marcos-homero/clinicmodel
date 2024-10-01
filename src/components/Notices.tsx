@@ -33,7 +33,7 @@ const Notices = () => {
   }, [api]);
 
   return (
-    <div className="w-full h-fit">
+    <div className="h-fit w-full">
       <Carousel
         setApi={setApi}
         className="w-full"
@@ -46,22 +46,22 @@ const Notices = () => {
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-              <Card className="bg-primary flex p-4 items-center">
-                <CardContent className="flex max-[940px]:flex-col max-[940px]:gap-8 p-4 w-full justify-around items-center">
-                  <div className="w-24 h-24">
+              <Card className="flex items-center bg-primary p-4">
+                <CardContent className="flex w-full items-center justify-around p-4 max-[940px]:flex-col max-[940px]:gap-8">
+                  <div className="h-24 w-24">
                     <Image src={appointment} alt="oi" />
                   </div>
-                  <div className="flex flex-col w-full min-[940px]:w-[60%] gap-4">
-                    <h1 className="text-white text-center  text-2xl font-semibold">
+                  <div className="flex w-full flex-col gap-4 min-[940px]:w-[60%]">
+                    <h1 className="text-center text-2xl font-semibold text-white">
                       Consulta de qualidade e humanizada é na Intelimed
                     </h1>
-                    <p className="text-white text-center ">
+                    <p className="text-center text-white">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Quaerat eveniet tempora facilis aspernatur omnis, numquam
                       nobis vel laboriosam
                     </p>
                   </div>
-                  <Button className="border hover:bg-sky-800 border-white">
+                  <Button className="border border-white hover:bg-sky-800">
                     Agende agora! <FaArrowRight />
                   </Button>
                 </CardContent>
@@ -70,7 +70,7 @@ const Notices = () => {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="flex gap-1 w-full justify-center py-2 text-sm text-muted-foreground">
+      <div className="flex w-full justify-center gap-1 py-2 text-sm text-muted-foreground">
         {Array.from({ length: count }).map((_, index) => (
           <FaCircle
             size={6}

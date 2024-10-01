@@ -41,36 +41,36 @@ const SubHeader = ({
   const [city, setCity] = useState("Itapetininga");
 
   return (
-    <section className="flex flex-col items-center w-full ">
-      <div className="relative flex flex-col bg-[#152e56] w-full items-center justify-center ">
-        <div className="flex max-sm:flex-col flex-row justify-between items-center py-16 gap-4 max-sm:gap-8 w-full px-6 max-w-[1300px]">
-          <div className="flex flex-col gap-16 justify-between">
-            <div className="flex flex-col max-sm:items-center  gap-4">
-              <h1 className="max-sm:text-2xl text-4xl font-semibold text-white">
+    <section className="flex w-full flex-col items-center">
+      <div className="relative flex w-full flex-col items-center justify-center bg-[#152e56]">
+        <div className="flex w-full max-w-[1300px] flex-row items-center justify-between gap-4 px-6 py-16 max-sm:flex-col max-sm:gap-8">
+          <div className="flex flex-col justify-between gap-16">
+            <div className="flex flex-col gap-4 max-sm:items-center">
+              <h1 className="text-4xl font-semibold text-white max-sm:text-2xl">
                 {content?.tipo}
               </h1>
               {content.medico && (
-                <h2 className="text-lg sm:text-2xl text-white font-bold w-fit text-wrap">
+                <h2 className="w-fit text-wrap text-lg font-bold text-white sm:text-2xl">
                   {content?.medico}
                 </h2>
               )}
             </div>
           </div>
-          <div className="max-sm:w-24 max-sm:h-24 w-48 h-48">
+          <div className="h-48 w-48 max-sm:h-24 max-sm:w-24">
             <Image src={typeSvg} alt="oi" />
           </div>
-          <p className="min-[640px]:hidden bg-sky-300 text-xs font-semibold w-fit text-[#152e56] px-4 py-1 mt-1 rounded-lg">
+          <p className="mt-1 w-fit rounded-lg bg-sky-300 px-4 py-1 text-xs font-semibold text-[#152e56] min-[640px]:hidden">
             Unidade: Itapetininga
           </p>
         </div>
       </div>
-      <div className="flex flex-col  w-full items-center justify-center">
-        <div className="flex flex-col pt-16 pb-8 gap-16 w-full px-6 max-w-[1300px]">
+      <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full max-w-[1300px] flex-col gap-16 px-6 pb-8 pt-16">
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  className="flex text-slate-600 items-center gap-2"
+                  className="flex items-center gap-2 text-slate-600"
                   href="/"
                 >
                   <FaHouseChimneyMedical size={16} /> Início
@@ -79,7 +79,7 @@ const SubHeader = ({
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink
-                  className="flex text-slate-600 items-center gap-2"
+                  className="flex items-center gap-2 text-slate-600"
                   href={content.medico ? "/consultas" : "/exames"}
                 >
                   {content.medico ? "Consultas" : "Exames"}
@@ -93,20 +93,20 @@ const SubHeader = ({
           </Breadcrumb>
         </div>
       </div>
-      <div className="flex gap-2 items-center w-full px-6 max-w-[1300px]">
-        <div className="flex flex-row max-[940px]:flex-col justify-between w-full gap-8 ">
-          <div className="flex flex-col gap-4 max-[940px]:w-full w-1/2 ">
+      <div className="flex w-full max-w-[1300px] items-center gap-2 px-6">
+        <div className="flex w-full flex-row justify-between gap-8 max-[940px]:flex-col">
+          <div className="flex w-1/2 flex-col gap-4 max-[940px]:w-full">
             {content.medico && (
-              <h3 className="text-xl font-bold w-fit text-wrap">
+              <h3 className="w-fit text-wrap text-xl font-bold">
                 Informações da consulta:
               </h3>
             )}
             {content.preparo && (
-              <h3 className="text-xl font-bold w-fit text-wrap">
+              <h3 className="w-fit text-wrap text-xl font-bold">
                 Informações do exame:
               </h3>
             )}
-            <p className="text-slate-600 text-sm w-full text-wrap">
+            <p className="w-full text-wrap text-sm text-slate-600">
               {content?.descricao} Lorem ipsum dolor sit amet consectetur
               adipisicing elit. Quam sint esse temporibus at laboriosam eaque,
               voluptate quis commodi cum doloribus rerum deserunt quaerat error?
@@ -114,10 +114,10 @@ const SubHeader = ({
             </p>
             {content.preparo && (
               <>
-                <h3 className="text-xl font-bold w-fit text-wrap">
+                <h3 className="w-fit text-wrap text-xl font-bold">
                   Informações do preparo:
                 </h3>
-                <p className="text-slate-600 text-sm w-full text-wrap">
+                <p className="w-full text-wrap text-sm text-slate-600">
                   {content?.preparo} Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quam sint esse temporibus at laboriosam
                   eaque, voluptate quis commodi cum doloribus rerum deserunt
@@ -127,19 +127,19 @@ const SubHeader = ({
             )}
             {content.medico && (
               <div className="flex flex-col">
-                <h3 className="text-xl font-bold w-fit text-wrap">
+                <h3 className="w-fit text-wrap text-xl font-bold">
                   Informações do médico:
                 </h3>
-                <p className="text-slate-600 mt-4 text-sm w-full text-wrap">
+                <p className="mt-4 w-full text-wrap text-sm text-slate-600">
                   {content.medico}
                 </p>
-                <p className="text-slate-600 mt-2 text-sm w-full text-wrap">
+                <p className="mt-2 w-full text-wrap text-sm text-slate-600">
                   CRM: 111111
                 </p>
-                <p className="text-slate-600 mt-4 font-bold text-sm w-full text-wrap">
+                <p className="mt-4 w-full text-wrap text-sm font-bold text-slate-600">
                   Este médico oferece desconto para todos os convênios
                 </p>
-                <p className="text-slate-600 mt-2 text-xs w-full text-wrap">
+                <p className="mt-2 w-full text-wrap text-xs text-slate-600">
                   As informações de valores das consultas com convênio aplicado
                   é feita durante o agendamento.
                 </p>
@@ -148,10 +148,10 @@ const SubHeader = ({
 
             {content.preparo && (
               <div className="flex flex-col">
-                <p className="text-slate-600 mt-4 font-bold text-sm w-full text-wrap">
+                <p className="mt-4 w-full text-wrap text-sm font-bold text-slate-600">
                   Este exame possui desconto para todos os convênios
                 </p>
-                <p className="text-slate-600 mt-2 text-xs w-full text-wrap">
+                <p className="mt-2 w-full text-wrap text-xs text-slate-600">
                   As informações de valores dos exames com convênio aplicado é
                   feita durante o agendamento.
                 </p>
@@ -159,12 +159,12 @@ const SubHeader = ({
             )}
           </div>
 
-          <div className="flex flex-col gap-8 w-2/5 max-[940px]:w-full shadow-sm p-8 border border-slate-200 rounded-md ">
+          <div className="flex w-2/5 flex-col gap-8 rounded-md border border-slate-200 p-8 shadow-sm max-[940px]:w-full">
             <div className="flex flex-col">
               <h4 className="text-xl font-bold">
                 Consulte os preços da unidade mais próxima de você
               </h4>
-              <p className="text-slate-600 mt-2 text-xs w-full text-wrap">
+              <p className="mt-2 w-full text-wrap text-xs text-slate-600">
                 Os valores podem sofrer alterações de acordo com a unidade
                 selecionada.
               </p>
@@ -172,7 +172,7 @@ const SubHeader = ({
             <div className="flex flex-col gap-2">
               <h5 className="text-xl font-bold">Selecione a unidade</h5>
               <Select>
-                <SelectTrigger className="flex items-center w-full gap-2 p-6 bg-white text-sm font-semibold  ">
+                <SelectTrigger className="flex w-full items-center gap-2 bg-white p-6 text-sm font-semibold">
                   <FaMapMarked size={16} />
                   <SelectValue placeholder={city} />
                   <FaArrowDown size={16} />
@@ -200,7 +200,7 @@ const SubHeader = ({
               </Select>
             </div>
             <div className="flex flex-col gap-2">
-              <p className="text-slate-600 font-bold text-xs w-full text-wrap">
+              <p className="w-full text-wrap text-xs font-bold text-slate-600">
                 A partir de:
               </p>
               <p className="text-4xl font-bold">R$ {content.valor}</p>
@@ -213,7 +213,7 @@ const SubHeader = ({
               }
               target="_blank"
             >
-              <Button className="flex text-base w-full px-8 gap-4 py-6">
+              <Button className="flex w-full gap-4 px-8 py-6 text-base">
                 Agende já <FaArrowRight />
               </Button>
             </Link>
