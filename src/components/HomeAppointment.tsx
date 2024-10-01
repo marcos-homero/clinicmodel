@@ -43,7 +43,7 @@ const HomeAppointment = () => {
       {appointments.map((item) => (
         <Link
           key={item.id}
-          href={`/exames/${item.id}`}
+          href={`/consultas/${item.id}`}
           className="max-[940px]:w-[200px] max-[940px]:h-fit w-1/4"
         >
           <Card key={item.id}>
