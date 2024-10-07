@@ -11,12 +11,6 @@ import Logo from "./Logo";
 import { Button } from "./ui/button";
 import MobileNavbar from "./MobileNavbar";
 import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Separator } from "./ui/separator";
 import {
   Select,
@@ -32,7 +26,6 @@ const Header = () => {
     { path: "/consultas", name: "Consultas" },
     { path: "/exames", name: "Exames" },
     { path: "/convenios", name: "Convênios" },
-    { path: "/blog", name: "Blog" },
   ];
 
   const [city, setCity] = useState("Itapetininga");
@@ -77,18 +70,15 @@ const Header = () => {
               ))}
             </div>
             <div className="flex gap-8">
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-2 border-none text-sm font-semibold text-primary outline-0">
-                  <FaCalendar size={16} />
-                  <p className="w-full">Meus Agendamento</p>
-                  <FaArrowDown size={16} />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="text-slate-500">
-                  <DropdownMenuItem>Agendar</DropdownMenuItem>
-                  <DropdownMenuItem>Meus agendamentos</DropdownMenuItem>
-                  <DropdownMenuItem>Cancelar agendamento</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Link
+                href="/agendamentos"
+                className="flex items-center gap-2 border-none text-sm font-semibold text-primary outline-0"
+              >
+                <FaCalendar size={16} />
+                <p className="w-full">Meus Agendamento</p>
+                <FaArrowDown size={16} />
+              </Link>
+
               <Select>
                 <SelectTrigger className="flex w-fit items-center gap-2 border-none bg-white text-sm font-semibold">
                   <FaMapMarked size={16} />

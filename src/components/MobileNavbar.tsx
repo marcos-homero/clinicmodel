@@ -7,12 +7,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
   Select,
   SelectContent,
   SelectItem,
@@ -43,7 +37,6 @@ const MobileNavbar = () => {
     { path: "/consultas", name: "Consultas" },
     { path: "/exames", name: "Exames" },
     { path: "/convenios", name: "Convênios" },
-    { path: "/blog", name: "Blog" },
   ];
 
   return (
@@ -90,20 +83,15 @@ const MobileNavbar = () => {
               ))}
             </div>
             <Separator />
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center justify-center border-none text-sm font-semibold text-primary outline-0">
-                <div className="flex gap-2">
-                  <FaCalendar size={16} />
-                  <p className="w-full">Meus Agendamento</p>
-                  <FaArrowDown size={16} />
-                </div>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="text-slate-500">
-                <DropdownMenuItem>Agendar</DropdownMenuItem>
-                <DropdownMenuItem>Meus agendamentos</DropdownMenuItem>
-                <DropdownMenuItem>Cancelar agendamento</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Link
+              href="/agendamentos"
+              className="flex items-center justify-center gap-2 border-none text-sm font-semibold text-primary outline-0"
+            >
+              <FaCalendar size={16} />
+              <p className="w-fit">Meus Agendamento</p>
+              <FaArrowDown size={16} />
+            </Link>
+
             <Select>
               <SelectTrigger className="flex w-full items-center justify-center gap-4 border-none bg-white text-sm font-semibold">
                 <div className="flex gap-2">

@@ -47,7 +47,7 @@ const MedicalServices = ({
       <div className="relative flex w-full flex-col items-center justify-center bg-[#152e56]">
         <div className="flex w-full max-w-[1300px] flex-row items-center justify-between gap-2 px-6 py-16">
           <div className="flex flex-col gap-2">
-            <h1 className="text-lg font-semibold text-white sm:text-4xl">
+            <h1 className="text-lg font-semibold text-white sm:text-2xl min-[940px]:text-4xl">
               {pageTitle}
             </h1>
             <p className="text-sm text-white sm:text-xl">

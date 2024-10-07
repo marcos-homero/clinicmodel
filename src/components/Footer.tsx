@@ -18,9 +18,7 @@ const Footer = () => {
 
   const linksAbout = [
     { path: "/", name: "Início" },
-
     { path: "/sobre", name: "Quem somos" },
-    { path: "/blog", name: "Blog" },
     { path: "/unidades", name: "Unidades" },
     { path: "/privacidade", name: "Politíca de Privacidade" },
   ];
