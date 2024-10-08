@@ -3,6 +3,15 @@ import familypaint from "@/../public/familypaint.jpg";
 import logomissao from "@/../public/missaologotransparente.png";
 import Link from "next/link";
 import { BsPostcardHeart } from "react-icons/bs";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { FaHouseChimneyMedical } from "react-icons/fa6";
 
 const page = () => {
   const partners = [
@@ -34,7 +43,27 @@ const page = () => {
         </div>
         <div className="absolute -bottom-[15%] w-full max-w-[1300px] px-6"></div>
       </div>
-      <div className="flex w-full max-w-[1300px] gap-16 px-6 py-16">
+      <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full max-w-[1300px] flex-col gap-16 px-6 pb-8 pt-16">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  className="flex items-center gap-2 text-slate-600"
+                  href="/"
+                >
+                  <FaHouseChimneyMedical size={16} /> Início
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Convênios</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+      </div>
+      <div className="flex w-full max-w-[1300px] gap-16 px-6 pb-16 pt-8">
         <div className="flex w-full flex-col gap-4 min-[940px]:absolute min-[940px]:z-50 min-[940px]:mt-16 min-[940px]:w-[840px] min-[940px]:pl-8">
           <h1 className="text-wrap text-4xl font-extrabold min-[940px]:w-3/4">
             Saiba se o seu plano faz parte da nossa lista de parceiros

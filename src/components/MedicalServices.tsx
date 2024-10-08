@@ -50,7 +50,7 @@ const MedicalServices = ({
             <h1 className="text-lg font-semibold text-white sm:text-2xl min-[940px]:text-4xl">
               {pageTitle}
             </h1>
-            <p className="text-sm text-white sm:text-xl">
+            <p className="text-sm text-white max-sm:w-2/3 sm:text-xl">
               Qual {pageSubTitle} você está procurando ?
             </p>
           </div>
