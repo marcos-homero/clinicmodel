@@ -69,6 +69,11 @@ const MobileNavbar = () => {
                 Agende pelo Telefone
               </Button>
             </Link>
+            <Link href="https://www.google.com" target="_blank">
+              <Button className="h-10 w-full gap-2 border-[1px] border-primary bg-white font-bold text-primary shadow-sm hover:bg-primary hover:text-white">
+                Resultado de exames <FaArrowDown />
+              </Button>
+            </Link>
 
             <Separator />
             <div className="flex flex-col items-center gap-4 py-4">

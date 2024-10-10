@@ -52,9 +52,11 @@ const Header = () => {
                 Agende pelo Telefone (15) 3537-0431
               </Button>
             </div>
-            <Button className="h-10 gap-2 border-[1px] border-primary bg-white font-bold text-primary shadow-sm hover:bg-primary hover:text-white">
-              Resultado de exames <FaArrowDown />
-            </Button>
+            <Link href="https://www.google.com" target="_blank">
+              <Button className="h-10 gap-2 border-[1px] border-primary bg-white font-bold text-primary shadow-sm hover:bg-primary hover:text-white">
+                Resultado de exames <FaArrowDown />
+              </Button>
+            </Link>
           </div>
           <Separator className="mt-4" />
           <div className="flex w-full items-center justify-between">

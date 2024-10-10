@@ -41,7 +41,6 @@ const page = () => {
 
           <BsPostcardHeart className="text-white" size={64} />
         </div>
-        <div className="absolute -bottom-[15%] w-full max-w-[1300px] px-6"></div>
       </div>
       <div className="flex w-full flex-col items-center justify-center">
         <div className="flex w-full max-w-[1300px] flex-col gap-16 px-6 pb-8 pt-16">

@@ -12,7 +12,6 @@ const Footer = () => {
     { path: "/consultas", name: "Consultas" },
     { path: "/exames", name: "Exames" },
     { path: "/agendamentos", name: "Meus Agendamentos" },
-    { path: "/resultados", name: "Resultado de Exames" },
     { path: "/convenios", name: "Convênios" },
   ];
 
