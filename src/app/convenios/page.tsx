@@ -65,11 +65,10 @@ const page = () => {
       <div className="flex w-full max-w-[1300px] gap-16 px-6 pb-16 pt-8">
         <div className="flex w-full flex-col gap-4 min-[940px]:absolute min-[940px]:z-50 min-[940px]:mt-16 min-[940px]:w-[840px] min-[940px]:pl-8">
           <h1 className="text-wrap text-4xl font-extrabold min-[940px]:w-3/4">
-            Saiba se o seu plano faz parte da nossa lista de parceiros
+            Verifique se o seu plano de saúde é aceito pela nossa clínica
           </h1>
           <p className="text-wrap text-slate-600 min-[940px]:w-3/4">
-            Reunimos os principais convênios do mercado para atender você!
-            Consulte abaixo se o seu convênio é atendido pela Intelimed.
+            Trabalhamos com os principais convênios para garantir o melhor atendimento. Confira abaixo se o seu plano faz parte da nossa rede de parceiros.
           </p>
         </div>
         <div className="flex w-full justify-end max-[940px]:hidden">
