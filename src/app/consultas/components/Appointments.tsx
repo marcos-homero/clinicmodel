@@ -57,7 +57,7 @@ const Appointments = () => {
 
         const data = await response.json();
         console.log(data);
-        console.log(specialties, error);
+
         setSpecialties(data);
       } catch (err: any) {
         setError(err.message);
@@ -70,6 +70,7 @@ const Appointments = () => {
 
   return (
     <div className="w-full">
+      <>{console.log(specialties, error)}</>
       <MedicalServices
         pageTitle="Consultas"
         pageSubTitle="consulta"
