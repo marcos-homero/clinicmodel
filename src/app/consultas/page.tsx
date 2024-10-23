@@ -1,9 +1,9 @@
-import Appointments from "./components/Appointments";
+import Doctors from "./components/Doctors";
 
-const page = async () => {
+const page = () => {
   return (
     <div className="w-full">
-      <Appointments />
+      <Doctors />
     </div>
   );
 };

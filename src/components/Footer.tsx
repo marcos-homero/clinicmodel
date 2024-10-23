@@ -12,15 +12,12 @@ const Footer = () => {
     { path: "/consultas", name: "Consultas" },
     { path: "/exames", name: "Exames" },
     { path: "/agendamentos", name: "Meus Agendamentos" },
-    { path: "/resultados", name: "Resultado de Exames" },
     { path: "/convenios", name: "Convênios" },
   ];
 
   const linksAbout = [
     { path: "/", name: "Início" },
-
     { path: "/sobre", name: "Quem somos" },
-    { path: "/blog", name: "Blog" },
     { path: "/unidades", name: "Unidades" },
     { path: "/privacidade", name: "Politíca de Privacidade" },
   ];

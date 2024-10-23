@@ -45,11 +45,10 @@ const HeroSection = () => {
     <section className="flex">
       <div className="flex w-full flex-col gap-4 min-[940px]:absolute min-[940px]:z-50 min-[940px]:mt-16 min-[940px]:w-[840px]">
         <h1 className="w-fit text-wrap text-4xl font-extrabold">
-          A melhor escolha para <br /> a sua saúde!
+          Cuidando da Sua Saúde, Transformando Vidas!
         </h1>
         <p className="w-fit text-wrap text-lg text-slate-600">
-          Conte com a confiança e segurança dos nossos <br /> laboratórios e
-          médicos. Agende já sua consulta
+          Oferecemos um atendimento de excelência para promover o bem-estar <br /> e a qualidade de vida. Agende já sua consulta
         </p>
         <Link
           href={

@@ -42,26 +42,23 @@ const SubHeader = ({
 
   return (
     <section className="flex w-full flex-col items-center">
-      <div className="relative flex w-full flex-col items-center justify-center bg-[#152e56]">
-        <div className="flex w-full max-w-[1300px] flex-row items-center justify-between gap-4 px-6 py-16 max-sm:flex-col max-sm:gap-8">
+      <div className="relative flex h-[224px] w-full flex-col items-center justify-center bg-[#152e56]">
+        <div className="flex w-full max-w-[1300px] flex-row items-center justify-between gap-4 px-6 py-16">
           <div className="flex flex-col justify-between gap-16">
             <div className="flex flex-col gap-4 max-sm:items-center">
-              <h1 className="text-4xl font-semibold text-white max-sm:text-2xl">
+              <h1 className="text-lg font-semibold text-white sm:text-2xl min-[940px]:text-4xl">
                 {content?.tipo}
               </h1>
               {content.medico && (
-                <h2 className="w-fit text-wrap text-lg font-bold text-white sm:text-2xl">
+                <h2 className="w-fit text-wrap text-base font-bold text-white sm:text-xl">
                   {content?.medico}
                 </h2>
               )}
             </div>
           </div>
-          <div className="h-48 w-48 max-sm:h-24 max-sm:w-24">
+          <div className="flex h-24 w-24 items-center">
             <Image src={typeSvg} alt="oi" />
           </div>
-          <p className="mt-1 w-fit rounded-lg bg-sky-300 px-4 py-1 text-xs font-semibold text-[#152e56] min-[640px]:hidden">
-            Unidade: Itapetininga
-          </p>
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-center">

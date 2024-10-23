@@ -14,7 +14,7 @@ interface ContentProps {
   medico: string;
 }
 
-const Appointments = () => {
+const Doctors = () => {
   const { input } = useContext(SearchContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [content, setContent] = useState<ContentProps[]>([]);
@@ -81,4 +81,4 @@ const Appointments = () => {
   );
 };
 
-export default Appointments;
+export default Doctors;
