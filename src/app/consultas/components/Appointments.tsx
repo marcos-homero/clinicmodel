@@ -25,9 +25,6 @@ const Appointments = () => {
   const indexOfLast = currentPage * qttPerPage;
   const indexOfFirst = indexOfLast - qttPerPage;
 
-  const [specialties, setSpecialties] = useState([]);
-  const [error, setError] = useState(null);
-
   const paginate = (page: number) => setCurrentPage(page);
 
   useEffect(() => {
@@ -57,10 +54,8 @@ const Appointments = () => {
 
         const data = await response.json();
         console.log(data);
-
-        setSpecialties(data);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
+        console.log(err);
       }
     };
 
@@ -70,7 +65,6 @@ const Appointments = () => {
 
   return (
     <div className="w-full">
-      <>{console.log(specialties, error)}</>
       <MedicalServices
         pageTitle="Consultas"
         pageSubTitle="consulta"
