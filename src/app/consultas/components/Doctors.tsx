@@ -33,8 +33,33 @@ const Doctors = () => {
         setFilteredData(resp[0]);
       });
     };
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.feegow.com/v1/api/specialties/list",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              "x-access-token":
+                "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmZWVnb3ciLCJhdWQiOiJwdWJsaWNhcGkiLCJpYXQiOjE3Mjk2MjIwMDIsImxpY2Vuc2VJRCI6Mjk0ODN9.ZmXxn7f-RJeZgjsf2xT9c8p3HP8cgFWnLBiNuLoCAxA", // Substitua por seu token real
+            },
+          },
+        );
+
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
     getConsultasApi();
+    fetchData();
   }, [input, indexOfFirst, indexOfLast]);
 
   return (
